@@ -1,0 +1,32 @@
+Anydesk is a very convenient remote desktop app, comparable to Teamviewer etc., which also runs perfectly on the Raspberry Pi.
+
+The installation is simple.
+
+Download the Raspberry Pi installation file (.deb) from the Anydesk website https://anydesk.com/de/downloads/raspberry-pi
+open the terminal and type navigate to the downloads folder
+cd /Downloads
+list the contents of the Downloads folder
+ls
+copy the name of the deb file to the clipboard (in this example it is anydesk_5.5.4-1_armhf.deb )
+install Anydesk with the command
+sudo dpkg -i anydesk_5.5.4-1_armhf.deb
+Now the installation is running and after completion you can use Anydesk
+Anydesk Fehler: display_server_not_supported
+If you now operate a “headless” Raspberry Pi - that is, a computer without a connected monitor, keyboard and mouse, have set “Access in absence” in the settings and want to connect to the computer via Anydesk, you will see that no monitor is connected is, the error message “ display_server_not_supported”.
+
+To solve this problem, you can log in to the Raspberry Pi via SSH (... or connect a monitor, mouse and keyboard and start the terminal) and edit the /boot/config.txt file with the following commands in the Nano editor:
+
+sudo bash
+nano /boot/config.txt
+remove the comment character # from the entry hdmi_force_hotplug = 1
+
+
+To save the change, press CTRL + O, Enter and CTRL + X to close the file.
+
+Then start the Raspberry Pi with
+
+reboot
+
+
+FROM
+https://www.davidkehr.com/raspberry-pi-und-anydesk-headless/
