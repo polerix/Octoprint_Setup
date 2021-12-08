@@ -1,8 +1,34 @@
 Two ways of doing this - with the sd card in the computer BEFORE you start up the Raspberry Pi
-and directly the WPA Supplicant.conf file
+and directly the wpa_supplicant.conf file
 
 https://www.raspberrypi-spy.co.uk/2017/04/manually-setting-up-pi-wifi-using-wpa_supplicant-conf/
 
 In either case, the content of the file is the same
-Open Octopi-wpa-supplicant.txt and copy the file directly to the sd card
-or use nano and copy the content to WPA supplicant.conf
+
+Download octopi-wpa-supplicant.txt from this github
+
+The SD card will mount as a drive/directory on your computer called "boot". 
+Open the drive using Finder (Mac) or Explorer (Windows).
+copy the file directly to the sd card.
+
+on startup the Raspberry Pi will copy the contents to the wpa_supplicant.conf
+
+The second way, is to type the command to open the file, and paste the information from the file into wpa_supplicant.conf
+
+in terminal enter
+
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
+then CTLR-o to write out, and CTRL-x to exit nano
+
+reboot the raspberry pi and you should be on wifi
+
+if ever you need to edit the file, here is what you are looking for
+
+## WPA/WPA2 secured
+network={
+  ssid="SSIDOFYOURWIRELESSNETWORK"
+  psk="PASSWORDOFYOURWIRELESSNETWORK"
+}
+
+take any # that are commenting out these lines, make sure the SSID has both quotes on it, as well as the password.
