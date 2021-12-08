@@ -1,0 +1,8 @@
+Two ways of doing this - with the sd card in the computer BEFORE you start up the Raspberry Pi
+and directly the WPA Supplicant.conf file
+
+https://www.raspberrypi-spy.co.uk/2017/04/manually-setting-up-pi-wifi-using-wpa_supplicant-conf/
+
+In either case, the content of the file is the same
+Open Octopi-wpa-supplicant.txt and copy the file directly to the sd card
+or use nano and copy the content to WPA supplicant.conf
