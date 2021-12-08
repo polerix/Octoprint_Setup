@@ -27,7 +27,7 @@ if ever you need to edit the file, here is what you are looking for
 
 ## WPA/WPA2 secured
 network={
-  ssid="SSIDOFYOURWIRELESSNETWORK"
+  ssid="NAMEOFYOURWIRELESSNETWORK"
   psk="PASSWORDOFYOURWIRELESSNETWORK"
 }
 
