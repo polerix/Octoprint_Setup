@@ -1,0 +1,8 @@
+How to use:
+Type in Raspberry Pi command line
+
+sudo nano /etc/motd
+then paste the information below in nano
+
+ctrl-o to write out the file
+ctrl-x to exit nano
