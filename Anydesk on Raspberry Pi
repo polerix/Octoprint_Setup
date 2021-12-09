@@ -8,9 +8,14 @@ cd /Downloads
 list the contents of the Downloads folder
 ls
 copy the name of the deb file to the clipboard (in this example it is anydesk_5.5.4-1_armhf.deb )
+
+wget https://download.anydesk.com/rpi/anydesk_6.1.1-1_armhf.deb
+
 install Anydesk with the command
-sudo dpkg -i anydesk_5.5.4-1_armhf.deb
+sudo dpkg -i anydesk_6.1.1-1_armhf.deb
 Now the installation is running and after completion you can use Anydesk
+
+
 Anydesk Fehler: display_server_not_supported
 If you now operate a “headless” Raspberry Pi - that is, a computer without a connected monitor, keyboard and mouse, have set “Access in absence” in the settings and want to connect to the computer via Anydesk, you will see that no monitor is connected is, the error message “ display_server_not_supported”.
 
