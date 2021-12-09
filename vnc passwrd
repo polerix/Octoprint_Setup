@@ -1,0 +1,13 @@
+You can change vnc password anytinme by typing
+
+vncpasswd
+
+enter the new password you want.
+
+it will be stored automatically in
+
+/home/pi/.vnc/passwd
+
+you can then start up vnc password
+
+tightvncserver -geometry 1280x720
